@@ -1,0 +1,14 @@
+{
+  "name": "price-api",
+  "version": "1.0.0",
+  "description": "HTTP API to provide data to my apps.",
+  "private": true,
+  "main": "index.js",
+  "author": "mat-sz <contact@matsz.dev>",
+  "license": "BSD-3-Clause-Clear",
+  "dependencies": {
+    "cron": "^1.7.2",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0"
+  }
+}
