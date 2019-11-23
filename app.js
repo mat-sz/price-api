@@ -7,13 +7,13 @@ const app = express();
 app.use('/', index);
 app.use('/v1/price', price);
 
-app.use(function(req, res, next) {
+app.use((req, res, next) => {
     let err = new Error('Not Found');
     err.status = 404;
     next(err);
 });
 
-app.use(function(err, req, res, next) {
+app.use((err, req, res, next) => {
     res.status(err.status || 500);
     res.json({
         message: err.message,

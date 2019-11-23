@@ -3,7 +3,7 @@ const router = Router();
 
 const store = require('../stores/price');
 
-router.get('/:symbol', function(req, res, next) {
+router.get('/:symbol', (req, res, next) => {
     const uppercaseSymbol = req.params.symbol.toUpperCase();
     if (store.current.hasOwnProperty(uppercaseSymbol)) {
         res.json({
